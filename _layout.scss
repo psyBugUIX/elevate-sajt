@@ -5,4 +5,13 @@
     @include responsive(mobile) {
         padding: $spacing-xl $spacing-sm;
     }
+
+    @include responsive(small-mobile) {
+    padding: $spacing-lg $spacing-sm;
+    
+    h2 {
+      font-size: 24px;
+      margin-bottom: $spacing-lg;
+    }
+  }
 }

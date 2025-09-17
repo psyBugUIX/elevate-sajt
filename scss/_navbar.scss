@@ -54,4 +54,36 @@
             gap: $spacing-sm;
         }
     }
+
+    @include responsive(small-mobile) {
+        padding: $spacing-sm;
+
+        .logo {
+            font-size: 20px;
+            margin-bottom: $spacing-sm;
+        }
+
+        .nav-links{
+            flex-direction: column;
+            width: 100%;
+            gap: $spacing-sm;
+        }
+
+        li {
+            margin: 0;
+            width: 100%;
+        }
+
+        a {
+            display: block;
+            text-align: center;
+            padding: $spacing-sm;
+        }
+    }
+
+    .primary-btn {
+        width: 100%;
+        text-align: center;
+        margin-top: $spacing-sm;
+    }
 }

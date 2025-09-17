@@ -45,4 +45,32 @@
     @include responsive(mobile) {
         width: 100%;
     }
+
+     @include responsive(small-mobile) {
+    gap: $spacing-lg;
+  }
+}
+
+.card {
+  // ... postojeći kod ...
+  
+  @include responsive(small-mobile) {
+    width: 100%;
+    padding: $spacing-md;
+    margin-bottom: $spacing-sm;
+    
+    h3 {
+      font-size: 20px;
+    }
+    
+    p {
+      font-size: 16px;
+      margin-bottom: $spacing-md;
+    }
+    
+    .primary-btn {
+      width: 100%;
+      padding: $spacing-md;
+    }
+  }
 }
