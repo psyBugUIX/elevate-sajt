@@ -1,0 +1,48 @@
+.center-section {
+    text-align: center;
+    padding: $spacing-xxl $spacing-sm;
+    
+    @include responsive(mobile) {
+        padding: $spacing-xl $spacing-sm;
+    }
+}
+
+.card-list {
+    display: flex;
+    justify-content: space-between;
+    gap: $spacing-xl;
+    
+    @include responsive(tablet) {
+        flex-direction: column;
+        align-items: center;
+        gap: $spacing-xxl;
+    }
+}
+
+.card {
+    @include card-style;
+    width: 27%;
+    text-align: center;
+    
+    h3 {
+        color: $primary-color;
+        margin-bottom: $spacing-md;
+    }
+    
+    p {
+        margin-bottom: $spacing-lg;
+        color: $text-color;
+    }
+    
+    .primary-btn {
+        margin-top: $spacing-md;
+    }
+    
+    @include responsive(tablet) {
+        width: 80%;
+    }
+    
+    @include responsive(mobile) {
+        width: 100%;
+    }
+}

@@ -1,0 +1,8 @@
+.center-section {
+    text-align: center;
+    padding: $spacing-xxl $spacing-sm;
+    
+    @include responsive(mobile) {
+        padding: $spacing-xl $spacing-sm;
+    }
+}

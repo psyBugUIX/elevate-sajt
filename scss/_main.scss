@@ -1,0 +1,68 @@
+.main {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: $spacing-section $spacing-sm;
+    
+    .content {
+        width: 50%;
+        text-align: left;
+    }
+    
+    h1 {
+        font-size: $font-xl;
+        color: $primary-color;
+        margin-bottom: $spacing-md;
+    }
+    
+    p {
+        font-size: $font-sm;
+        margin-bottom: $spacing-xl;
+    }
+    
+    img {
+        width: 40%;
+        max-width: 100%;
+        height: auto;
+    }
+    
+    @include responsive(tablet) {
+        flex-direction: column;
+        text-align: center;
+        padding: $spacing-xxl $spacing-sm;
+        
+        .content {
+            width: 100%;
+            text-align: center;
+            margin-bottom: $spacing-xxl;
+        }
+        
+        img {
+            width: 60%;
+        }
+    }
+    
+    @include responsive(mobile) {
+        padding: $spacing-xl $spacing-sm;
+        
+        h1 {
+            font-size: 36px;
+        }
+        
+        img {
+            width: 80%;
+        }
+    }
+
+    @include responsive(mobile) {
+        padding: $spacing-xl $spacing-sm;
+        
+        h1 {
+            font-size: 36px;
+        }
+        
+        img {
+            width: 80%;
+        }
+    }
+}

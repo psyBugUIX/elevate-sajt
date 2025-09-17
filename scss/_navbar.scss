@@ -1,0 +1,57 @@
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: $spacing-md $spacing-xl;
+    box-shadow: $shadow-light;
+    margin-bottom: $spacing-sm;
+    
+    .logo {
+        font-size: $font-md;
+        font-weight: bold;
+        color: $primary-color;
+    }
+    
+    .nav-links {
+        list-style: none;
+        padding: 0;
+        display: flex;
+        
+        li {
+            display: inline-block;
+            margin: 0 $spacing-sm;
+        }
+        
+        a {
+            text-decoration: none;
+            font-weight: bold;
+            color: $text-color;
+            
+            &:hover {
+                color: $primary-color;
+            }
+        }
+    }
+    
+    @include responsive(tablet) {
+        flex-direction: column;
+        gap: $spacing-md;
+        
+        .nav-links {
+            order: 2;
+            margin: $spacing-md 0;
+        }
+        
+        .primary-btn {
+            order: 3;
+        }
+    }
+    
+    @include responsive(mobile) {
+        .nav-links {
+            flex-direction: column;
+            text-align: center;
+            gap: $spacing-sm;
+        }
+    }
+}
