@@ -10,7 +10,16 @@ $font-md: 24px;
 $font-lg: 32px;
 $font-xl: 48px;
 
-/* Mixini */
+$shadow-light: 0 2px 10px rgba(0, 0, 0, 0.1);
+$border-radius-btn: 8px;
+$border-radius-card: 10px;
+$spacing-sm: 10px;
+$spacing-md: 15px;
+$spacing-lg: 20px;
+$spacing-xl: 30px;
+$spacing-xxl: 50px;
+$spacing-section: 100px;
+
 @mixin flex-between($align: center) {
     display: flex;
     justify-content: space-between;
@@ -26,21 +35,21 @@ $font-xl: 48px;
 
 @mixin card-style {
     background: $white;
-    padding: 20px;
-    border-radius: 10px;
-    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    padding: $spacing-lg;
+    border-radius: $border-radius-card;
+    box-shadow: $shadow-light;
 }
 
 @mixin button-style {
     display: inline-block;
-    padding: 15px 30px;
+    padding: $spacing-md $spacing-xl;
     cursor: pointer;
     font-size: $font-sm;
     font-weight: bold;
     color: $white;
     text-decoration: none;
     border: none;
-    border-radius: 8px;
+    border-radius: $border-radius-btn;
     background: linear-gradient(45deg, $primary-color, $secondary-color);
     transition: all 0.3s ease;
     
@@ -58,7 +67,6 @@ $font-xl: 48px;
     }
 }
 
-/* General Styles */
 body {
     font-family: Arial, sans-serif;
     color: $text-color;
@@ -70,14 +78,13 @@ h2 {
     font-size: $font-lg;
 }
 
-/* Navbar */
 .navbar {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 15px 5%;
-    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
-    margin-bottom: 10px;
+    padding: $spacing-md $spacing-xl;
+    box-shadow: $shadow-light;
+    margin-bottom: $spacing-sm;
     
     .logo {
         font-size: $font-md;
@@ -91,7 +98,7 @@ h2 {
         
         li {
             display: inline-block;
-            margin: 0 10px;
+            margin: 0 $spacing-sm;
         }
         
         a {
@@ -106,17 +113,16 @@ h2 {
     }
 }
 
-/* Primary Button */
 .primary-btn {
     display: inline-block;
-    padding: 15px 30px;
+    padding: $spacing-md $spacing-xl;
     cursor: pointer;
     font-size: $font-sm;
     font-weight: bold;
     color: $white;
     text-decoration: none;
     border: none;
-    border-radius: 8px;
+    border-radius: $border-radius-btn;
     background: linear-gradient(45deg, $primary-color, $secondary-color);
     transition: all 0.3s ease;
     
@@ -126,12 +132,11 @@ h2 {
     }
 }
 
-/* Main Section */
 .main {
     display: flex;
     align-items: center;
     justify-content: space-between;
-    padding: 100px 10px;
+    padding: $spacing-section $spacing-sm;
     
     .content {
         width: 50%;
@@ -151,14 +156,13 @@ h2 {
     }
 }
 
-/* Features & Plans Sections */
 .features {
     background: $background-light;
 }
 
 .center-section {
     text-align: center;
-    padding: 50px 10px;
+    padding: $spacing-xxl $spacing-sm;
 }
 
 .card-list {
@@ -166,44 +170,41 @@ h2 {
     justify-content: space-between;
 }
 
-/* Card */
 .card {
     background: $white;
-    padding: 20px;
+    padding: $spacing-lg;
     width: 27%;
-    border-radius: 10px;
-    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    border-radius: $border-radius-card;
+    box-shadow: $shadow-light;
     text-align: center;
     
     h3 {
         color: $primary-color;
-        margin-bottom: 15px;
+        margin-bottom: $spacing-md;
     }
     
     p {
-        margin-bottom: 20px;
+        margin-bottom: $spacing-lg;
         color: $text-color;
     }
     
     .primary-btn {
-        margin-top: 15px;
+        margin-top: $spacing-md;
     }
 }
 
-/* Footer */
 .footer {
     text-align: center;
-    padding: 20px;
+    padding: $spacing-lg;
     background: $background-dark;
     color: $white;
 }
 
-/* Responsive */
 @include responsive(tablet) {
     .card-list {
         flex-direction: column;
         align-items: center;
-        gap: 50px;
+        gap: $spacing-xxl;
     }
     .card {
         width: 80%;
